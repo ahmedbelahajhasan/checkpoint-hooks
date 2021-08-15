@@ -1,5 +1,7 @@
+// import { Button } from 'bootstrap'
 import React from 'react'
-import {Card} from "react-bootstrap"
+import {Card,Button} from "react-bootstrap"
+import { Link } from 'react-router-dom'
 
 const MovieCard = ({movie}) => {
     // const myStyle ={
@@ -15,8 +17,11 @@ const MovieCard = ({movie}) => {
                 {movie.description}
                 </Card.Text>
                 <p> {movie.rate} </p>
+                <Button variant="primary"> <Link to={`/movie/${movie.id}`} >trailer </Link> </Button>
             </Card.Body>
+            
         </Card>
+        
     )
 }
 //default props for posterUrl 
